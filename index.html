@@ -69,7 +69,12 @@
           dengan fokus pada sistem informasi berbasis Laravel. Terbiasa merancang basis data, membangun autentikasi
           multiuser, hingga menghadirkan antarmuka yang rapi dan fungsional.</p>
         <div class="cta-row">
-          <a href="#projects" class="btn btn-primary">Lihat Proyek</a>
+          <!-- TODO: upload file CV PDF ke path assets/cv/alfi-ardiansyah-cv.pdf -->
+          <a href="assets/cv/alfi-ardiansyah-cv.pdf" class="btn btn-primary" download target="_blank" aria-label="Download CV Alfi Ardiansyah">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+          <a href="#projects" class="btn btn-ghost">Lihat Proyek</a>
           <a href="#contact" class="btn btn-ghost">Hubungi Saya</a>
         </div>
       </div>
@@ -181,8 +186,11 @@
           <div>
             <div class="exp-role">Fullstack Developer</div>
             <div class="exp-org">Freelance</div>
-            <p class="exp-desc">Membangun sistem informasi pendaftaran untuk lembaga pelatihan masyarakat menggunakan
-              Laravel dan Tailwind CSS, lengkap dengan manajemen data peserta.</p>
+            <p class="exp-desc">Membangun sistem informasi pendaftaran untuk lembaga pelatihan masyarakat menggunakan Laravel dan Tailwind CSS, lengkap dengan manajemen data peserta.</p>
+            <div class="metric-highlight">
+              <!-- TODO: isi metrik nyata, contoh: "Melayani 50+ peserta pelatihan" atau "Mengelola 8+ modul sistem" -->
+              <strong>Cakupan / Metrik:</strong> <span class="metric-value">[ISI METRIK DI SINI]</span>
+            </div>
           </div>
         </div>
         <div class="exp-item">
@@ -190,8 +198,11 @@
           <div>
             <div class="exp-role">Fullstack Developer</div>
             <div class="exp-org">Freelance — Tim 3 Orang</div>
-            <p class="exp-desc">Mengembangkan "Desa Ekspor Indonesia", platform katalog eksportir yang menghubungkan
-              produsen lokal dengan pasar global, menggunakan CodeIgniter dan Bootstrap.</p>
+            <p class="exp-desc">Mengembangkan "Desa Ekspor Indonesia", platform katalog eksportir yang menghubungkan produsen lokal dengan pasar global, menggunakan CodeIgniter dan Bootstrap.</p>
+            <div class="metric-highlight">
+              <!-- TODO: isi metrik nyata, contoh: "Menghubungkan 100+ produsen lokal" atau "Mengoptimalkan performa loading 40%" -->
+              <strong>Cakupan / Metrik:</strong> <span class="metric-value">[ISI METRIK DI SINI]</span>
+            </div>
           </div>
         </div>
         <div class="exp-item">
@@ -199,8 +210,37 @@
           <div>
             <div class="exp-role">Praktik Kerja Lapangan</div>
             <div class="exp-org">Divisi TIK, Mabes Polri</div>
-            <p class="exp-desc">Membangun sistem arsip pesan berbasis localhost dengan HTML, CSS, dan PHP native,
-              termasuk analisis kebutuhan dan maintenance rutin.</p>
+            <p class="exp-desc">Membangun sistem arsip pesan berbasis localhost dengan HTML, CSS, dan PHP native, termasuk analisis kebutuhan dan maintenance rutin.</p>
+            <div class="metric-highlight">
+              <!-- TODO: isi metrik nyata, contoh: "Mengarsip 1.000+ dokumen pesan" atau "Efisiensi pencarian dokumen 50%" -->
+              <strong>Cakupan / Metrik:</strong> <span class="metric-value">[ISI METRIK DI SINI]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section-pad bg-alt" id="education">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="headline">Pendidikan</h2>
+        <div class="section-num">04 / Riwayat Pendidikan</div>
+      </div>
+
+      <div class="exp-list reveal">
+        <div class="exp-item">
+          <!-- TODO: isi tahun masuk & perkiraan lulus, contoh: 2022 — 2026 -->
+          <div class="exp-date">Semester Akhir<br><span style="font-size:11px; color:var(--ink-soft);"><!-- TODO: isi tahun --> (2022 — 2026)</span></div>
+          <div>
+            <div class="exp-role">Teknik Informatika (S1)</div>
+            <div class="exp-org">Universitas Pamulang</div>
+            <p class="exp-desc">Fokus studi pada rekayasa perangkat lunak, arsitektur aplikasi web berbasis Laravel, perancangan basis data relasional, dan pengembangan kecerdasan buatan.</p>
+            <!-- TODO: isi IPK jika ingin ditampilkan, contoh: IPK: 3.xx / 4.00, hapus baris di bawah jika tidak ingin menampilkan IPK -->
+            <div class="metric-highlight" style="margin-top: 12px;">
+              <strong>Status / Kualifikasi:</strong> <span class="metric-value">Mahasiswa Semester Akhir</span> <!-- TODO: Tambahkan IPK jika ada, contoh | IPK: 3.80 -->
+            </div>
           </div>
         </div>
       </div>
@@ -208,16 +248,17 @@
   </section>
 
   <!-- ============ PROJECTS (deep showcase) ============ -->
-  <section class="section-pad bg-alt" id="projects">
+  <section class="section-pad" id="projects">
     <div class="wrap">
       <div class="section-head reveal">
         <h2 class="headline">Proyek</h2>
-        <div class="section-num">04 / Studi Kasus</div>
+        <div class="section-num">05 / Studi Kasus</div>
       </div>
     </div>
 
     <div class="wrap">
 
+      <!-- Project 1: Becks Apparel -->
       <div class="project reveal">
         <div class="project-visual">
           <span class="pv-tag">E-Commerce &amp; Customizer · Becks Apparel</span>
@@ -231,7 +272,7 @@
           </svg>
         </div>
         <div class="project-body">
-          <div class="project-index">Studi Kasus Utama — E-Commerce &amp; Platform Kustomisasi Jersey</div>
+          <div class="project-index">Proyek 01 — E-Commerce &amp; Platform Kustomisasi Jersey</div>
           <h3 class="project-title">Becks Apparel E-Commerce</h3>
           <div class="project-role">Lead Fullstack Developer &amp; Architect</div>
           <p class="project-desc">Aplikasi Web E-Commerce kustomisasi jersey interaktif untuk Becks Apparel di bawah PT Bola Media Sportainment. Memfasilitasi kustomisasi desain mandiri (Fabric.js 2D Canvas), arsitektur 4 Aktor Sistem (Pelanggan, Admin, Tim Produksi, Owner), kalkulasi ongkir RajaOngkir, pembayaran otomatis Midtrans QRIS, invoice WhatsApp Fonnte, dan tracking produksi real-time via WebSocket Laravel Reverb.</p>
@@ -257,15 +298,174 @@
         </div>
       </div>
 
+      <!-- Project 2: Sistem Faktur Penjualan Apotik -->
+      <div class="project reverse reveal">
+        <div class="project-visual">
+          <span class="pv-tag">Apotek · Laravel</span>
+          <span class="pv-index">02</span>
+          <!-- GANTI: screenshot dashboard apotik, path: assets/projects/apotik-screenshot-1.png -->
+          <img src="assets/projects/apotik-screenshot-1.png" alt="Sistem Faktur Penjualan Apotik" onerror="this.style.display='none'" style="width:100%; height:100%; object-fit:cover;">
+          <svg class="pv-mesh" viewBox="0 0 300 240" preserveAspectRatio="none">
+            <g stroke="#6B2737" stroke-width=".5" opacity=".4">
+              <line x1="0" y1="60" x2="300" y2="20" />
+              <line x1="0" y1="140" x2="300" y2="100" />
+            </g>
+          </svg>
+        </div>
+        <div class="project-body">
+          <div class="project-index">Proyek 02 — Aplikasi Manajemen Faktur Apotek</div>
+          <h3 class="project-title">Sistem Faktur Penjualan Apotik</h3>
+          <div class="project-role">Fullstack Developer</div>
+          <p class="project-desc">Sistem manajemen faktur penjualan untuk apotek dengan autentikasi multiuser role-based (admin/kasir/pasien), 5 tabel database relasional, CRUD transaksi penjualan, price snapshot di detail faktur untuk integritas data historis, atomic transaction wrapping, cetak invoice PDF otomatis, dan auto-generated nomor invoice.</p>
+          <div class="project-detail">
+            <div><strong>Integritas Data</strong>Price Snapshot &amp; Atomic Transactions</div>
+            <div><strong>Fitur Utama</strong>Multiuser RBAC, Invoice PDF, Auto-Numbering</div>
+          </div>
+          <div class="tags" style="margin-bottom: 24px;">
+            <span>Laravel</span>
+            <span>MySQL</span>
+            <span>barryvdh/laravel-dompdf</span>
+            <span>SoftDeletes</span>
+            <span>Bootstrap</span>
+          </div>
+          <div class="cta-row">
+            <!-- TODO: isi link detail & live demo jika ada -->
+            <a href="#" class="btn btn-primary" onclick="alert('Link detail placeholder. Isi link di href'); return false;">Lihat Detail &rarr;</a>
+            <a href="#" class="btn btn-ghost" onclick="alert('Link demo placeholder. Isi link di href'); return false;">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Sistem Rekomendasi Makanan Sehat Berbasis AI -->
+      <div class="project reveal">
+        <div class="project-visual">
+          <span class="pv-tag">AI &amp; Web · Kampus</span>
+          <span class="pv-index">03</span>
+          <!-- GANTI: screenshot platform rekomendasi makanan sehat AI, path: assets/projects/ai-food-screenshot-1.png -->
+          <img src="assets/projects/ai-food-screenshot-1.png" alt="Sistem Rekomendasi Makanan Sehat Berbasis AI" onerror="this.style.display='none'" style="width:100%; height:100%; object-fit:cover;">
+          <svg class="pv-mesh" viewBox="0 0 300 240" preserveAspectRatio="none">
+            <g stroke="#6B2737" stroke-width=".5" opacity=".4">
+              <circle cx="80" cy="70" r="30" fill="none" />
+              <circle cx="200" cy="150" r="45" fill="none" />
+            </g>
+          </svg>
+        </div>
+        <div class="project-body">
+          <div class="project-index">Proyek 03 — Kecerdasan Buatan &amp; Personal Nutrisi</div>
+          <h3 class="project-title">Sistem Rekomendasi Makanan Sehat Berbasis AI</h3>
+          <div class="project-role">Fullstack Developer (Tim 4 Orang)</div>
+          <p class="project-desc">Platform rekomendasi makanan sehat berbasis kecerdasan buatan, menggabungkan machine learning untuk personalisasi rekomendasi nutrisi dengan antarmuka web interaktif yang intuitif.</p>
+          <div class="project-detail">
+            <div><strong>Fokus AI</strong>Personalisasi Nutrisi Machine Learning</div>
+            <div><strong>Tim</strong>4 Anggota</div>
+          </div>
+          <div class="tags" style="margin-bottom: 24px;">
+            <span>React.js</span>
+            <span>Python / FastAPI</span>
+            <span>TensorFlow / Keras</span>
+            <span>MySQL</span>
+          </div>
+          <div class="cta-row">
+            <!-- TODO: isi link detail & live demo jika ada -->
+            <a href="#" class="btn btn-primary" onclick="alert('Link detail placeholder. Isi link di href'); return false;">Lihat Detail &rarr;</a>
+            <a href="#" class="btn btn-ghost" onclick="alert('Link demo placeholder. Isi link di href'); return false;">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: Sistem Informasi Pendaftaran Pelatihan -->
+      <div class="project reverse reveal">
+        <div class="project-visual">
+          <span class="pv-tag">Sistem Informasi · Freelance</span>
+          <span class="pv-index">04</span>
+          <!-- GANTI: screenshot sistem pendaftaran pelatihan, path: assets/projects/pelatihan-screenshot-1.png -->
+          <img src="assets/projects/pelatihan-screenshot-1.png" alt="Sistem Informasi Pendaftaran Pelatihan" onerror="this.style.display='none'" style="width:100%; height:100%; object-fit:cover;">
+          <svg class="pv-mesh" viewBox="0 0 300 240" preserveAspectRatio="none">
+            <g stroke="#6B2737" stroke-width=".5" opacity=".4">
+              <rect x="40" y="40" width="80" height="80" fill="none" />
+              <rect x="170" y="110" width="90" height="90" fill="none" />
+            </g>
+          </svg>
+        </div>
+        <div class="project-body">
+          <div class="project-index">Proyek 04 — Sistem Informasi Pelatihan Masyarakat</div>
+          <h3 class="project-title">Sistem Informasi Pendaftaran Pelatihan</h3>
+          <div class="project-role">Fullstack Developer — Freelance</div>
+          <p class="project-desc">Sistem pendaftaran online untuk lembaga pelatihan masyarakat, lengkap dengan manajemen data peserta, dashboard admin, dan alur pendaftaran end-to-end.</p>
+          <div class="project-detail">
+            <div><strong>Fokus</strong>Fullstack Development &amp; Admin Panel</div>
+            <div><strong>Fitur Kunci</strong>Pendaftaran End-to-End &amp; Manajemen Data</div>
+          </div>
+          <div class="tags" style="margin-bottom: 24px;">
+            <span>Laravel</span>
+            <span>Tailwind CSS</span>
+            <span>MySQL</span>
+          </div>
+          <div class="cta-row">
+            <!-- TODO: isi link detail & live demo jika ada -->
+            <a href="#" class="btn btn-primary" onclick="alert('Link detail placeholder. Isi link di href'); return false;">Lihat Detail &rarr;</a>
+            <a href="#" class="btn btn-ghost" onclick="alert('Link demo placeholder. Isi link di href'); return false;">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS (OPTIONAL PLACEHOLDER) ============ -->
+  <!-- TODO: isi testimoni dari dosen pembimbing / klien freelance / rekan kerja. CARA HIDE SECTION: tambahkan style="display:none;" pada tag <section id="testimonials"> di bawah -->
+  <section class="section-pad bg-alt" id="testimonials">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="headline">Testimoni</h2>
+        <div class="section-num">06 / Rekomendasi</div>
+      </div>
+
+      <div class="testimonial-grid reveal">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">
+              <!-- TODO: ganti avatar-1.png di path assets/testimonials/avatar-1.png (dimensi 100x100px) -->
+              <img src="assets/testimonials/avatar-1.png" alt="Nama Klien / Dosen" onerror="this.style.display='none'">
+              <span class="avatar-fallback">P1</span>
+            </div>
+            <div>
+              <div class="testimonial-name"><!-- TODO: Nama Pembimbing / Klien --> Nama Pembimbing / Klien</div>
+              <div class="testimonial-role"><!-- TODO: Jabatan / Organisasi --> Dosen Pembimbing / Klien Freelance</div>
+            </div>
+          </div>
+          <p class="testimonial-quote"><!-- TODO: Tuliskan kutipan testimoni di sini --> "Alfi mampu merancang dan mengeksekusi sistem informasi berbasis Laravel dengan rapi, terstruktur, dan tepat waktu."</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-avatar">
+              <!-- TODO: ganti avatar-2.png di path assets/testimonials/avatar-2.png (dimensi 100x100px) -->
+              <img src="assets/testimonials/avatar-2.png" alt="Nama Rekan / Client" onerror="this.style.display='none'">
+              <span class="avatar-fallback">P2</span>
+            </div>
+            <div>
+              <div class="testimonial-name"><!-- TODO: Nama Rekan Kerja / Client --> Nama Rekan Kerja / Client</div>
+              <div class="testimonial-role"><!-- TODO: Jabatan / Organisasi --> Project Lead / Tim Proyek</div>
+            </div>
+          </div>
+          <p class="testimonial-quote"><!-- TODO: Tuliskan kutipan testimoni di sini --> "Kemampuan komunikasi teknis dan penyelesaian logika basis data yang kompleks sangat membantu kelancaran proyek."</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ============ CONTACT ============ -->
   <section class="section-pad" id="contact">
     <div class="wrap contact-inner">
-      <div class="eyebrow" style="justify-content:center;">05 / Kontak</div>
+      <div class="eyebrow" style="justify-content:center;">07 / Kontak</div>
       <h2 class="headline reveal">Mari<br>Berkolaborasi</h2>
-      <a class="contact-email" href="mailto:alfiardiansyah4642@gmail.com">alfiardiansyah4642@gmail.com</a>
+      <!-- Anti-Spam Obfuscated Email Link -->
+      <a class="contact-email" id="emailLink" href="#" aria-label="Kirim Email ke Alfi Ardiansyah">
+        <span id="emailText">[Memuat email...]</span>
+      </a>
 
       <div class="contact-meta reveal">
         <div>
@@ -319,6 +519,19 @@
 
   <script src="js/navbar.js"></script>
   <script>
+    // Anti-spam email obfuscation
+    (function() {
+      const u = 'alfiardiansyah4642';
+      const d = 'gmail.com';
+      const emailEl = document.getElementById('emailLink');
+      const textEl = document.getElementById('emailText');
+      if (emailEl && textEl) {
+        const email = u + '@' + d;
+        textEl.textContent = email;
+        emailEl.href = 'mailto:' + email;
+      }
+    })();
+
     // reveal on scroll
     const revealEls = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver((entries) => {
