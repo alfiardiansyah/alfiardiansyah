@@ -11,7 +11,7 @@ Panduan file media & dokumen placeholder yang perlu diisi secara manual:
 - **Path**: `assets/projects/`
 - **File & Dimensi Rekomendasi**:
   1. `assets/projects/apotik-screenshot-1.png` (Rekomendasi: 1200x800px, 16:9 ratio, Max 300KB)
-  2. `assets/projects/ai-food-screenshot-1.png` (Rekomendasi: 1200x800px, 16:9 ratio, Max 300KB)
+  2. `assets/projects/lkp-screenshot-1.png` (Rekomendasi: 1200x800px, 16:9 ratio, Max 300KB)
   3. `assets/projects/pelatihan-screenshot-1.png` (Rekomendasi: 1200x800px, 16:9 ratio, Max 300KB)
 
 ## 3. Foto Testimoni (Opsional)
