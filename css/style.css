@@ -99,10 +99,23 @@ img {
 }
 
 .rule {
-  height: 1px;
+  height: 2px;
   width: 100%;
   background: var(--line);
   border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.rule::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/pattern.png');
+  background-size: 140px auto;
+  background-repeat: repeat-x;
+  opacity: 0.28;
+  pointer-events: none;
 }
 
 section {
@@ -252,6 +265,26 @@ nav {
   display: flex;
   align-items: center;
   padding: 140px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle Batik Motif Watermark Accent */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 60px;
+  right: 2%;
+  width: 380px;
+  height: 480px;
+  background-image: url('../images/pattern.png');
+  background-size: 160px auto;
+  background-repeat: repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 80%);
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 80%);
 }
 
 .hero .wrap {
@@ -370,6 +403,19 @@ nav {
   overflow: hidden;
   display: flex;
   align-items: flex-end;
+}
+
+.photo-inner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/pattern.png');
+  background-size: 140px auto;
+  background-repeat: repeat;
+  opacity: 0.09;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .photo-inner svg {
@@ -845,9 +891,30 @@ nav {
 }
 
 /* ---------- Contact ---------- */
+#contact {
+  position: relative;
+  overflow: hidden;
+}
+
+#contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/pattern.png');
+  background-size: 200px auto;
+  background-repeat: repeat;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+}
+
 .contact-inner {
   text-align: center;
   padding: 40px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-inner .headline {
@@ -947,6 +1014,19 @@ footer {
   letter-spacing: .05em;
   color: var(--ink-faint);
   border-top: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/pattern.png');
+  background-size: 160px auto;
+  background-repeat: repeat-x;
+  opacity: 0.05;
+  pointer-events: none;
 }
 
 /* ---------- Reveal on scroll ---------- */
@@ -1040,5 +1120,17 @@ footer {
 
   .scroll-cue {
     display: none;
+  }
+
+  .hero::before {
+    width: 240px;
+    height: 300px;
+    opacity: 0.05;
+    right: -10%;
+  }
+
+  #contact::before,
+  footer::before {
+    opacity: 0.04;
   }
 }
