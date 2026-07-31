@@ -99,22 +99,25 @@ img {
 }
 
 .rule {
-  height: 4px;
+  height: 1px;
   width: 100%;
   background: var(--line);
   border: none;
   position: relative;
-  overflow: hidden;
 }
 
-.rule::before {
+.rule::after {
   content: '';
   position: absolute;
-  inset: 0;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(480px, 80vw);
+  height: 11px;
   background-image: url('../images/pattern.png');
-  background-size: 140px auto;
   background-repeat: repeat-x;
-  opacity: 0.70;
+  background-size: auto 11px;
+  opacity: 0.10;
   pointer-events: none;
 }
 
@@ -144,9 +147,11 @@ section {
   0% {
     transform: translateY(0) rotate(0deg);
   }
+
   50% {
     transform: translateY(-12px) rotate(1.5deg);
   }
+
   100% {
     transform: translateY(6px) rotate(-1deg);
   }
@@ -269,17 +274,21 @@ nav {
   overflow: hidden;
 }
 
-/* Batik Motif Full-Section Pattern Overlay */
 .hero::before {
   content: '';
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  width: 65%;
+  height: 100%;
   background-image: url('../images/pattern.png');
-  background-size: 220px auto;
   background-repeat: repeat;
-  opacity: 0.18;
+  background-size: 260px auto;
+  opacity: 0.06;
   pointer-events: none;
   z-index: 0;
+  mask-image: radial-gradient(circle at 75% 35%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 80%);
+  -webkit-mask-image: radial-gradient(circle at 75% 35%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 80%);
 }
 
 .hero .wrap {
@@ -400,19 +409,6 @@ nav {
   align-items: flex-end;
 }
 
-.photo-inner::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('../images/pattern.png');
-  background-size: 140px auto;
-  background-repeat: repeat;
-  opacity: 0.25;
-  mix-blend-mode: overlay;
-  pointer-events: none;
-  z-index: 1;
-}
-
 .photo-inner svg {
   width: 62%;
   margin: 0 auto 0;
@@ -522,32 +518,6 @@ nav {
 /* ---------- Section shells ---------- */
 .section-pad {
   padding: 130px 0;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Rich Batik Pattern Overlay for all main sections */
-#about::before,
-#skills::before,
-#experience::before,
-#projects::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('../images/pattern.png');
-  background-size: 220px auto;
-  background-repeat: repeat;
-  opacity: 0.15;
-  pointer-events: none;
-  z-index: 0;
-}
-
-#about .wrap,
-#skills .wrap,
-#experience .wrap,
-#projects .wrap {
-  position: relative;
-  z-index: 1;
 }
 
 .bg-alt {
@@ -922,11 +892,13 @@ nav {
   position: absolute;
   inset: 0;
   background-image: url('../images/pattern.png');
-  background-size: 220px auto;
   background-repeat: repeat;
-  opacity: 0.20;
+  background-size: 240px auto;
+  opacity: 0.05;
   pointer-events: none;
   z-index: 0;
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .contact-inner {
@@ -1026,6 +998,7 @@ nav {
 
 /* ---------- Footer ---------- */
 footer {
+  position: relative;
   padding: 34px var(--pad);
   text-align: center;
   font-family: var(--font-mono);
@@ -1033,7 +1006,6 @@ footer {
   letter-spacing: .05em;
   color: var(--ink-faint);
   border-top: 1px solid var(--line);
-  position: relative;
   overflow: hidden;
 }
 
@@ -1042,10 +1014,11 @@ footer::before {
   position: absolute;
   inset: 0;
   background-image: url('../images/pattern.png');
-  background-size: 160px auto;
   background-repeat: repeat;
-  opacity: 0.15;
+  background-size: 200px auto;
+  opacity: 0.04;
   pointer-events: none;
+  z-index: 0;
 }
 
 /* ---------- Reveal on scroll ---------- */
@@ -1096,6 +1069,21 @@ footer::before {
 }
 
 @media (max-width: 640px) {
+  .hero::before {
+    opacity: 0.04;
+    width: 100%;
+    background-size: 180px auto;
+  }
+
+  #contact::before,
+  footer::before {
+    opacity: 0.03;
+  }
+
+  .rule::after {
+    opacity: 0.06;
+  }
+
   .nav-links {
     position: fixed;
     top: 66px;
@@ -1139,17 +1127,5 @@ footer::before {
 
   .scroll-cue {
     display: none;
-  }
-
-  .hero::before {
-    width: 240px;
-    height: 300px;
-    opacity: 0.05;
-    right: -10%;
-  }
-
-  #contact::before,
-  footer::before {
-    opacity: 0.04;
   }
 }
