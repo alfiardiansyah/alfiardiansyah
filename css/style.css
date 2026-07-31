@@ -99,7 +99,7 @@ img {
 }
 
 .rule {
-  height: 3px;
+  height: 4px;
   width: 100%;
   background: var(--line);
   border: none;
@@ -114,7 +114,7 @@ img {
   background-image: url('../images/pattern.png');
   background-size: 140px auto;
   background-repeat: repeat-x;
-  opacity: 0.55;
+  opacity: 0.70;
   pointer-events: none;
 }
 
@@ -269,22 +269,17 @@ nav {
   overflow: hidden;
 }
 
-/* Subtle Batik Motif Watermark Accent */
+/* Batik Motif Full-Section Pattern Overlay */
 .hero::before {
   content: '';
   position: absolute;
-  top: 40px;
-  right: 1%;
-  width: 420px;
-  height: 520px;
+  inset: 0;
   background-image: url('../images/pattern.png');
   background-size: 220px auto;
   background-repeat: repeat;
-  opacity: 0.22;
+  opacity: 0.18;
   pointer-events: none;
   z-index: 0;
-  mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 80%);
-  -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 80%);
 }
 
 .hero .wrap {
@@ -527,6 +522,32 @@ nav {
 /* ---------- Section shells ---------- */
 .section-pad {
   padding: 130px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Rich Batik Pattern Overlay for all main sections */
+#about::before,
+#skills::before,
+#experience::before,
+#projects::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/pattern.png');
+  background-size: 220px auto;
+  background-repeat: repeat;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#about .wrap,
+#skills .wrap,
+#experience .wrap,
+#projects .wrap {
+  position: relative;
+  z-index: 1;
 }
 
 .bg-alt {
@@ -903,11 +924,9 @@ nav {
   background-image: url('../images/pattern.png');
   background-size: 220px auto;
   background-repeat: repeat;
-  opacity: 0.18;
+  opacity: 0.20;
   pointer-events: none;
   z-index: 0;
-  mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
-  -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
 }
 
 .contact-inner {
@@ -1024,8 +1043,8 @@ footer::before {
   inset: 0;
   background-image: url('../images/pattern.png');
   background-size: 160px auto;
-  background-repeat: repeat-x;
-  opacity: 0.18;
+  background-repeat: repeat;
+  opacity: 0.15;
   pointer-events: none;
 }
 
