@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowra — Showcase Proyek Personal Finance Garden</title>
+  <meta name="description" content="Showcase aplikasi manajemen keuangan pribadi Flowra Personal Finance Garden oleh Alfi Ardiansyah.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Custom Showcase Page Styles (Botanical Flora Vibe) */
+    .store-hero {
+      padding: 180px 0 70px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--bg) 0%, #edf3eb 100%);
+    }
+
+    .store-header-grid {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .app-icon-flora {
+      width: 120px;
+      height: 120px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #557153 0%, #344432 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 14px 32px rgba(85, 113, 83, 0.28);
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      padding: 24px;
+    }
+
+    .app-icon-flora img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+    }
+
+    .app-title-area h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .app-developer {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: #557153;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .store-badge-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .store-badge {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: rgba(85, 113, 83, 0.08);
+      color: #3b5039;
+      border: 1px solid rgba(85, 113, 83, 0.22);
+    }
+
+    .store-stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .store-stat-item {
+      border-right: 1px solid var(--line);
+      padding: 0 12px;
+    }
+
+    .store-stat-item:last-child {
+      border-right: none;
+    }
+
+    .store-stat-value {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .store-stat-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-top: 4px;
+    }
+
+    .gallery-single {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 60px;
+      box-shadow: 0 20px 48px rgba(33, 30, 27, 0.06);
+    }
+
+    .gallery-single img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .gallery-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 24px;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(33, 30, 27, 0.08);
+      border-color: #557153;
+    }
+
+    .gallery-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(85, 113, 83, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      padding: 8px;
+    }
+
+    .gallery-card-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .gallery-card-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--ink);
+    }
+
+    .gallery-card-desc {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+    }
+
+    .actor-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .actor-box {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 28px;
+      border-radius: 8px;
+    }
+
+    .actor-box h4 {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #557153;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .actor-box ul {
+      margin-top: 10px;
+    }
+
+    .actor-box ul li {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      padding: 3px 0;
+    }
+
+    .actor-box ul li::before {
+      content: '🌿 ';
+    }
+
+    @media (max-width: 768px) {
+      .store-hero {
+        padding-top: 130px;
+      }
+      .store-header-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .app-icon-flora {
+        margin: 0 auto;
+      }
+      .store-badge-group {
+        justify-content: center;
+      }
+      .store-stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .store-stat-item {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 12px;
+      }
+      .gallery-grid, .actor-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============ HEADER COMPONENT ============ -->
+  <header id="siteHeader"></header>
+
+  <!-- ============ STORE HERO HEADER ============ -->
+  <section class="store-hero">
+    <div class="wrap">
+      <div class="store-header-grid">
+        <div class="app-icon-flora">
+          <img src="images/flowra/sprout.png" alt="Flowra Logo Sprout">
+        </div>
+        <div class="app-title-area">
+          <h1>Flowra — Simple Personal Finance Garden</h1>
+          <div class="app-developer">Creator &amp; Fullstack Architect · Grow Your Wealth Naturally</div>
+          <div class="store-badge-group">
+            <span class="store-badge">Laravel 12</span>
+            <span class="store-badge">TailwindCSS</span>
+            <span class="store-badge">Alpine.js</span>
+            <span class="store-badge">Chart.js</span>
+            <span class="store-badge">Vercel Serverless</span>
+            <span class="store-badge">MySQL / PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Store Stats -->
+      <div class="store-stats-bar">
+        <div class="store-stat-item">
+          <div class="store-stat-value">Net Worth</div>
+          <div class="store-stat-label">Real-Time Asset Balance</div>
+        </div>
+        <div class="store-stat-item">
+          <div class="store-stat-value">Multi-Wallet</div>
+          <div class="store-stat-label">Bank, E-Wallet, Tunai</div>
+        </div>
+        <div class="store-stat-item">
+          <div class="store-stat-value">Vine Meters</div>
+          <div class="store-stat-label">Visual Budget Limits</div>
+        </div>
+        <div class="store-stat-item">
+          <div class="store-stat-value">100% Serverless</div>
+          <div class="store-stat-label">Vercel Cloud Deployment</div>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a href="index.html#projects" class="btn btn-ghost">&larr; Kembali ke Portofolio</a>
+        <a href="https://flowra-rust.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">Buka Live Demo &rarr;</a>
+        <a href="https://github.com/alfiardiansyah/flowra" target="_blank" rel="noopener" class="btn btn-ghost">Lihat Repository GitHub &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HERO SHOWCASE PREVIEW ============ -->
+  <section class="section-pad" id="overview">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="headline">Tampilan Antarmuka &amp; Dashboard</h2>
+        <div class="section-num">Visual Showcase</div>
+      </div>
+
+      <div class="gallery-single reveal">
+        <img src="assets/proyek4.png" alt="Flowra Dashboard Showcase">
+      </div>
+
+      <div class="gallery-grid reveal">
+        <!-- Feature 1 -->
+        <div class="gallery-card">
+          <div class="gallery-card-icon">
+            <img src="images/flowra/cash-leaf.png" alt="Multi Wallet">
+          </div>
+          <h3 class="gallery-card-title">1. Multi-Rekening &amp; Net Worth Engine</h3>
+          <p class="gallery-card-desc">Kalkulasi kekayaan bersih otomatis yang menyeimbangkan saldo rekening aktif (Bank, E-Wallet, Tunai), piutang berjalan, serta beban hutang. Dilengkapi transfer antar-rekening yang bersih tanpa mendistorsi arus kas riil.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="gallery-card">
+          <div class="gallery-card-icon">
+            <img src="images/flowra/tree.png" alt="Budgeting">
+          </div>
+          <h3 class="gallery-card-title">2. Anggaran Bulanan &amp; Vine Progress Meters</h3>
+          <p class="gallery-card-desc">Alokasi batas belanja per kategori dengan meteran visual berbentuk rambatan tanaman. Memberikan peringatan dini otomatis saat pengeluaran mendekati atau melampaui batas anggaran bulanan yang ditetapkan.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="gallery-card">
+          <div class="gallery-card-icon">
+            <img src="images/flowra/flower-bloom.png" alt="Debts">
+          </div>
+          <h3 class="gallery-card-title">3. Manajemen Hutang &amp; Piutang Terstruktur</h3>
+          <p class="gallery-card-desc">Sistem pembukuan pinjaman yang akurat mencatat dana dipinjamkan maupun diterima. Dilengkapi riwayat pembayaran cicilan bertahap, status jatuh tempo, dan pelunasan otomatis terintegrasi ke saldo kas.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="gallery-card">
+          <div class="gallery-card-icon">
+            <img src="images/flowra/sprout.png" alt="Reports">
+          </div>
+          <h3 class="gallery-card-title">4. Transaksi Rutin &amp; Laporan Ekspor CSV</h3>
+          <p class="gallery-card-desc">Otomatisasi pencatatan langganan dan tagihan berkala. Menyajikan analitik visual pergerakan arus kas bulanan serta fitur ekspor laporan keuangan format CSV siap olah di Microsoft Excel atau Google Sheets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECHNICAL ARCHITECTURE ============ -->
+  <section class="section-pad bg-alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="headline">Sorotan Rekayasa &amp; Arsitektur</h2>
+        <div class="section-num">Technical Highlights</div>
+      </div>
+
+      <p class="reveal" style="max-width: 680px; color: var(--ink-soft); font-size: 16px; margin-bottom: 24px;">
+        Flowra dibangun dengan standar rekayasa perangkat lunak modern untuk performa tinggi, responsivitas cepat, dan kehandalan cloud serverless:
+      </p>
+
+      <div class="actor-grid reveal">
+        <div class="actor-box">
+          <h4>1. Serverless Deployment on Vercel</h4>
+          <p style="font-size: 14px; color: var(--ink-soft);">Arsitektur PHP modern tanpa perlu mengelola server VPS secara manual.</p>
+          <ul>
+            <li>Konfigurasi runtime Vercel PHP Serverless Function</li>
+            <li>Optimasi aset statis Vite via Content Delivery Network (CDN)</li>
+            <li>Dukungan multi-database (MySQL, PostgreSQL, SQLite)</li>
+            <li>Waktu muat instan dengan zero server idle cost</li>
+          </ul>
+        </div>
+
+        <div class="actor-box">
+          <h4>2. Botanical Design System &amp; Reactive UI</h4>
+          <p style="font-size: 14px; color: var(--ink-soft);">Pengalaman pengguna yang menenangkan dengan interaksi instan.</p>
+          <ul>
+            <li>Palet warna Sage, Mint, Leaf, dan Coral yang harmonis</li>
+            <li>Kombinasi tipografi Playfair Display &amp; Inter</li>
+            <li>Interaktivitas Alpine.js tanpa beban overhead bundle JavaScript berat</li>
+            <li>Sandbox demo interaktif langsung di halaman utama</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cta-row reveal" style="margin-top: 50px; justify-content: center;">
+        <a href="https://flowra-rust.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">Kunjungi Aplikasi Flowra &rarr;</a>
+        <a href="index.html#projects" class="btn btn-ghost">&larr; Kembali ke Daftar Proyek</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    &copy; 2026 Alfi Ardiansyah. Dirancang &amp; dibangun sendiri.
+  </footer>
+
+  <script src="js/navbar.js"></script>
+  <script>
+    // reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.classList.add('in');
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: .15, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(el => io.observe(el));
+  </script>
+
+</body>
+
+</html>
