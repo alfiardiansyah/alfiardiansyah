@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <li><a href="${getHref('#experience')}">Pengalaman</a></li>
         <li><a href="${getHref('#education')}">Pendidikan</a></li>
         <li><a href="${getHref('#projects')}" ${!isHomePage ? 'class="active"' : ''}>Proyek</a></li>
+        <li><a href="${getHref('#certificates')}">Sertifikat</a></li>
         <li><a href="${getHref('#contact')}">Kontak</a></li>
       </ul>
       <button class="mobile-toggle" id="mobileToggle" aria-label="Buka menu">
